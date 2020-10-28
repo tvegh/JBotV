@@ -8,8 +8,6 @@ import markovify
 
 import re
 
-from keep_alive import keep_alive
-
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
 
@@ -178,5 +176,4 @@ async def whymans(ctx):
 async def trump(ctx):
     await ctx.send(trumpModel.make_sentence())
 
-keep_alive()
 bot.run(token)
